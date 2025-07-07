@@ -19,6 +19,6 @@ COPY run.sh /
 COPY requirements.txt /
 RUN chmod a+x /run.sh
 
-RUN pip3 install flask
+RUN pip install flask
 
 CMD [ "/run.sh" ]
