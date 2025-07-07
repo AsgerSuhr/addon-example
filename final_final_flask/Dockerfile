@@ -7,7 +7,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Install requirements for add-on
 RUN \
   apk add --no-cache \
-    python3
+    python3 \
+    python3-pip 
 
 # Python 3 HTTP Server serves the current working dir
 # So let's set it to our add-on persistent data directory.
@@ -18,6 +19,6 @@ COPY run.sh /
 COPY requirements.txt /
 RUN chmod a+x /run.sh
 
-RUN pip install -r requirements.txt --break-system-packages 
+RUN pip3 install -r requirements.txt --break-system-packages 
 
 CMD [ "/run.sh" ]
