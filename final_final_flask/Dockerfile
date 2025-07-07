@@ -8,7 +8,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
   apk add --no-cache \
     python3 \
-    python3-pip 
+    py3-pip 
 
 # Python 3 HTTP Server serves the current working dir
 # So let's set it to our add-on persistent data directory.
