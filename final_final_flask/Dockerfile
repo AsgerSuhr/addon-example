@@ -15,6 +15,6 @@ COPY run.sh /
 COPY requirements.txt /
 RUN chmod a+x /run.sh
 
-RUN pip3 install requirements.txt
+RUN python3 -m pip install requirements.txt
 
 CMD [ "/run.sh" ]
