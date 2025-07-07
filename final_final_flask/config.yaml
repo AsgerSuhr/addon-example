@@ -12,3 +12,15 @@ arch:
 startup: services
 ports:
   5000/tcp: 5000  
+options:
+  beer: true
+  wine: true
+  liquor: false
+  name: "world"
+  year: 2017
+schema:
+  beer: bool
+  wine: bool
+  liquor: bool
+  name: str
+  year: int
