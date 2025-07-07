@@ -24,3 +24,5 @@ schema:
   liquor: bool
   name: str
   year: int
+ingress: true
+panel_icon: "mdi:standard-ha-icons"
