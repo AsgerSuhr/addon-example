@@ -2,4 +2,4 @@
 
 echo "Hello world!"
 
-python3 -m http.server 5000
+python3 app.py

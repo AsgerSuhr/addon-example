@@ -12,6 +12,9 @@ WORKDIR /data
 
 # Copy data for add-on
 COPY run.sh /
+COPY requirements.txt /
 RUN chmod a+x /run.sh
+
+RUN pip install requirements.txt
 
 CMD [ "/run.sh" ]
