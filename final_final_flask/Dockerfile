@@ -2,13 +2,14 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Set shell
-# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Install requirements for add-on
 RUN \
   apk add --no-cache \
     python3 \
-    py3-pip 
+    py3-pip \
+    py3-flask
 
 # Python 3 HTTP Server serves the current working dir
 # So let's set it to our add-on persistent data directory.
@@ -18,7 +19,5 @@ WORKDIR /data
 COPY run.sh /
 COPY requirements.txt /
 RUN chmod a+x /run.sh
-
-RUN apk add flask
 
 CMD [ "/run.sh" ]
