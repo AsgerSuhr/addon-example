@@ -17,7 +17,7 @@ WORKDIR /data
 
 # Copy data for add-on
 COPY run.sh /
-COPY app.py .
+COPY app.py /data/
 RUN chmod a+x /run.sh
 
 CMD [ "/run.sh" ]
