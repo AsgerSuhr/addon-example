@@ -2,4 +2,4 @@
 
 echo "Hello world!"
 
-python3 /data/app.py
+python3 app.py
